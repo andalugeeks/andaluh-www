@@ -43,13 +43,10 @@
             padding: 8px;
 
 
-
-            @media screen and (max-width: 1087px) {
-                @media screen and (orientation:portrait) {
-                    flex-direction: column;
-                    align-items: center;
-                    justify-content: center;
-                }
+            @include until($tablet) {
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
             }
 
             .options-left {
@@ -62,12 +59,10 @@
                     margin-right: 4px;
                 }
 
-                @media screen and (max-width: 1087px) {
-                    @media screen and (orientation:portrait) {
-                        position: relative;
-                        top: 0;
-                        left: 0;
-                    }
+                @include until($tablet) {
+                    position: relative;
+                    top: 0;
+                    left: 0;
                 }
             }
 
