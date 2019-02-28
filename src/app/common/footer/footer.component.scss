@@ -17,11 +17,15 @@
     padding: 24px 28px 0;
     color: $colorWhite;
 
-    a {
-      color: $colorWhite;
-
-      img {
-        max-width: 54px;
+    & > div {
+      a {
+        color: $colorWhite;
+        &:not(:last-child) {
+          margin: 0 12px 0 0;
+        }
+        img {
+          max-width: 54px;
+        }
       }
     }
   
