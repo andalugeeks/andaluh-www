@@ -55,12 +55,24 @@
     }
 
     .navbar-menu {
+      display: block;
+      visibility: hidden;
+      opacity: 0;
+      z-index: -1;
+      height: 0;
+      max-height: 0;
+      padding: 0;
+      overflow: hidden;
+      transition: max-height $animationSpeed3 $animationF0;
+
       &.is-active {
-        &.mobile-floating {
-          position: absolute;
-          right: 0;
-          left: 0;
-        }
+        visibility: visible;
+        opacity: 1;
+        z-index: 9;
+        height: auto;
+        max-height: 60vh;
+        padding: 0.5rem 0;
+        overflow: auto;
       }
       &.center {
         justify-content: center;
