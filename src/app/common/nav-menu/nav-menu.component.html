@@ -1,0 +1,39 @@
+<nav class="navbar is-primary" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+
+    <a class="navbar-item" href="https://andaluh.es/">
+      <img src="./assets/imgs/andalugeeks_white.png" />
+    </a>
+    
+    <a role="button" class="navbar-burger burger" (click)="toggleNav()" [class.is-active]="isActive" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+
+  </div>
+
+  <div class="navbar-menu" [class.is-active]="isActive">
+    <div class="navbar-end">
+
+        <a class="navbar-item" href="https://andaluh.es/transcriptor/">
+            {{ 'MENU.ONE' | translate }}
+          </a>
+          <a class="navbar-item" href="https://andaluh.es/quiene-cemo/">
+            {{ 'MENU.TWO' | translate }}
+          </a>
+          <a class="navbar-item" href="https://andaluh.es/contatta/">
+            {{ 'MENU.THREE' | translate }}
+          </a>
+          <a class="navbar-item" href="https://github.com/andalugeeks/andaluh-www">
+            {{ 'MENU.FOUR' | translate }}
+          </a>  
+        <a class="navbar-item">
+          <span *ngIf="currentLang === 'and'" (click)="langTo('en')">(EN)</span>
+          <span *ngIf="currentLang !== 'and'" (click)="langTo('and')">(AND)</span>
+        </a>
+    </div>
+  </div>
+</nav>
+
+<div class="overlay" (click)="toggleNav()" *ngIf="isActive"></div>

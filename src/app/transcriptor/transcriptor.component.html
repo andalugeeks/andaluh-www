@@ -1,0 +1,80 @@
+<div class="textarea-wrapper">
+    <div class="options-container">
+        <div>
+            <div class="dropdown" [class.show-options]="false">
+                <div class="selected">
+                    {{ from.label | translate }}
+                </div>
+                <ul [class.active]="false">
+                    <li *ngFor="let option of from_options;" [ngClass]="{selected: from.label === option.id}">
+                        {{ option.label | translate }}
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <textarea
+        #textCasElement
+        class="textarea column"
+        autocomplete="on"
+        autocorrect="off"
+        autocapitalize="off"
+        [placeholder]='casPlaceholder'
+        spellcheck="false"
+        (keypress)="onKeyUp($event.target.value)"
+        (keyup)="onKeyUp($event.target.value)"
+    ></textarea>
+</div>
+<div class="textarea-wrapper">
+    <div class="options-container">
+        <div class="options-left">
+            <div class="icon-circle primary-border" (click)="resetVafAndVvf()">EPA</div>
+            <div class="vaf-dropdown">
+                <div class="selected icon-circle" (click)="dropdownToggle()">{{ vaf }}</div>
+                <ul [class.active]="showVafDrop">
+                    <li *ngIf="vaf !== 'ç'" (click)="changeVaf('ç')">
+                        <div class="icon-circle">Ç</div>
+                    </li>
+                    <li *ngIf="vaf !== 's'" (click)="changeVaf('s')">
+                        <div class="icon-circle">S</div>
+                    </li>
+                    <li *ngIf="vaf !== 'z'" (click)="changeVaf('z')">
+                        <div class="icon-circle">Z</div>
+                    </li>
+                    <li *ngIf="vaf !== 'h'" (click)="changeVaf('h')">
+                        <div class="icon-circle">H</div>
+                    </li>
+                </ul>
+            </div>
+            <div class="icon-circle light-green" (click)="toggleVVF()">
+                <ng-container *ngIf="vvf === 'j'">H</ng-container>
+                <ng-container *ngIf="vvf === undefined">J</ng-container>
+            </div>
+        </div>
+        <div class="dropdown-container">
+            <div class="dropdown" [class.show-options]="false">
+                <div class="selected">
+                    {{ to.label | translate }}
+                </div>
+                <ul [class.active]="false">
+                    <li *ngFor="let option of to_options;" [ngClass]="{selected: to.id === option.id}">
+                        {{ option.label | translate }}
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <textarea 
+        class="textarea column"
+        autocomplete="off"
+        autocorrect="off"
+        autocapitalize="off"
+        [placeholder]='andPlaceholder'
+        spellcheck="false"
+        readonly="true"
+        [value]="transcriptedValue"
+        (click)="copyToClipboard($event)"
+    ></textarea>
+</div>
+
+<div class="overlay" (click)="dropdownToggle()" *ngIf="showVafDrop"></div>

@@ -1,0 +1,58 @@
+@import 'theme';
+
+:host {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    
+    .content-wrapper {
+        flex: 1;
+        overflow: auto;
+        background-image: url('../assets/svg/curve_bg.svg');
+        background-size: 100% auto;
+        background-repeat: no-repeat;
+        background-position-y: -2px;
+
+        @media screen and (max-width: 1087px) {
+            @media screen and (orientation:portrait) {
+                background-image: url('../assets/svg/curve_bg_mobile.svg');
+            }
+        }
+        @include until($tablet) {
+            @media screen and (orientation:portrait) {
+                background-image: url('../assets/svg/curve_bg_mobile.svg');
+            }
+        }
+
+
+        .top {
+            width: 100%;
+            padding: 12px 22px 24px;
+            margin-bottom: 16px;
+
+            header {
+                margin: 12px 0;
+                text-align: center;
+
+                @include until($tablet) {
+                    margin: 0;
+                }
+                img {
+                    width: 280px;
+
+                    @include until($tablet) {
+                        width: 240px;
+                    }
+                }
+                svg {
+                    width: 240px;
+
+                    @include until($tablet) {
+                        width: 180px;
+                    }
+                }
+            }
+        }
+    }
+
+}

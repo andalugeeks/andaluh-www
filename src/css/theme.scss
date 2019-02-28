@@ -1,0 +1,44 @@
+$colorPrimary: #016735;
+$colorWhite: #FFFFFF;
+$colorBlack: #000;
+$colorB90: #1A1E29;
+$colorB80: #292D3A;
+$colorB70: #383D4C;
+$lightGreen: #8DC63F;
+
+// Components color variables
+$textareaShadowColor: #DBDBDB;
+$textAreaBgColor: rgba(241, 242, 242, 0.93);
+
+$animationSpeed0: 2s;
+$animationSpeed1: 1s;
+$animationSpeed2: .25s;
+$animationSpeed3: .5s;
+$animationSpeed4: .1s;
+$animationF0: ease-out;
+$animationF1: linear;
+
+$fontFamily: 'Roboto', sans-serif;
+
+// bulma primary color override - start
+$primary: $colorPrimary;
+// bulma primary color override - end
+
+@import "~bulma/bulma.sass";
+
+.button {
+    cursor: pointer;
+    border-radius: 2px;
+    opacity: 1;
+    transition: opacity $animationSpeed1 $animationF0;
+
+    &:hover {
+
+        opacity: 0.9;
+    }
+    &.is-secondary {
+        background-color: $colorB70;
+        border-color: $colorB70;
+        color: $colorWhite;
+    }
+  }

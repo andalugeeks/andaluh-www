@@ -1,0 +1,33 @@
+@import 'theme.scss';
+
+:host {
+  display: flex;
+  flex: 1; 
+  width: 100%;
+  justify-content: center;
+  background-color: $colorPrimary;  
+
+  @media screen and (max-width: 1087px) {
+    flex-direction: column;
+    justify-content: flex-start;
+    flex-grow: 1;
+  }
+
+  .block.content {
+    padding: 24px 28px 0;
+    color: $colorWhite;
+
+    a {
+      color: $colorWhite;
+
+      img {
+        max-width: 54px;
+      }
+    }
+  
+    h1, h2, h3 {
+      color: $lightGreen;
+      margin-bottom: 0.28em;
+    }
+  }
+}

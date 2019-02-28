@@ -1,0 +1,76 @@
+@import 'theme';
+
+:host {
+  
+  .overlay {
+    opacity: 0.1;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    background-color: white;
+  }
+
+  .navbar-brand {
+    .navbar-item {
+      img {
+        max-height: 2.75rem;
+      }
+    }
+  }
+  .logo-wrapper {
+    flex-direction: column;
+    display: flex;
+    img {
+      max-width: 180px;
+    }
+  }
+
+  nav.navbar {
+    &.is-primary {
+      .navbar-item {
+        color: $colorWhite;
+        @include until($tablet) {
+          &:hover {
+            color: $colorBlack;
+          }
+        }
+      }
+      @media screen and (max-width: 1087px) {
+        .navbar-item {
+          &:hover {
+            color: $colorBlack;
+          }
+        }
+      }
+      .navbar-menu {
+        background-color: $colorPrimary;
+      }
+    }
+
+    .navbar-burger {
+      transition: background-color $animationSpeed3 $animationF0;
+    }
+
+    .navbar-menu {
+      &.is-active {
+        &.mobile-floating {
+          position: absolute;
+          right: 0;
+          left: 0;
+        }
+      }
+      &.center {
+        justify-content: center;
+        .navbar-start {
+          margin-left: auto;
+        }
+      }
+      .navbar-item {
+        transition: background-color $animationSpeed3 $animationF0;
+      }
+    }
+  }
+}

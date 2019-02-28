@@ -1,0 +1,25 @@
+{
+    "MENU": {
+        "ONE": "Iniçio",
+        "TWO": "Quienê çemô",
+        "THREE": "Contâtto",
+        "FOUR": "Repoçitorio"
+    },
+    "FOOTER": {
+        "NEWSLETTER": {
+            "HEADLINE": "Niûl-letê",
+            "MSG": "¡Çûccríbete a nuêttro niûl-letê pa êttâh ar día! Prometemô no çêh peçâh y çolo informâh de coçâ importantê.",
+            "BTN": "Çûccríbeme"
+        },
+        "SOCIAL": {
+            "HEADLINE": "Redê Çoçialê",
+            "MSG": "Çi lo que quierê êh mantenerte informá, entonçê puedê çegînnô en nuêttrâ redê çoçialê, que tenemô toâ lâ que quierâ."
+        },
+        "OPEN_SOURCE": {
+            "HEADLINE": "GitHub",
+            "MSG": "Çomô Open Source, açí que çi quierê bêh nuêttro código no tienê mâ que îh a nuêttro GitHub y exâl-le un bîttaço s nuêttro trabaho."
+        }
+    },
+    "ES": "catteyâno",
+    "AND": "andalûh"
+}
