@@ -17,8 +17,8 @@
             "MSG": "Follow us if you want to be updated with the latest!"
         },
         "OPEN_SOURCE": {
-            "HEADLINE": "GitHub",
-            "MSG": "We are Open Source! We publish our source code in GitHub, where you can have a look at our different projects and follow what we do."
+            "HEADLINE": "OpenSource",
+            "MSG": "Somos una comunidad de desarrollo de software libre. Contribuye desde GitHub y únete a la conversación en Slack."
         }
     },
     "ES": "spanish",
