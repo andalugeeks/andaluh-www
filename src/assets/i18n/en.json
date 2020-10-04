@@ -1,26 +1,34 @@
 {
-    "MENU": {
-        "ONE": "Home",
-        "TWO": "Who are we?",
-        "THREE": "Projects",
-        "FOUR": "Contact",
-        "FIVE": "GitHub"
+  "MENU": {
+    "ONE": "Home",
+    "TWO": "Who are we?",
+    "THREE": "Projects",
+    "FOUR": "Contact",
+    "FIVE": "GitHub"
+  },
+  "FOOTER": {
+    "NEWSLETTER": {
+      "HEADLINE": "Newsletter",
+      "MSG": "Subscribe to our Newsletter. We will only use it for important stuff, we promise not to be too annoying :)",
+      "BTN": "Subscribe"
     },
-    "FOOTER": {
-        "NEWSLETTER": {
-            "HEADLINE": "Newsletter",
-            "MSG": "Subscribe to our Newsletter. We will only use it for important stuff, we promise not to be too annoying :)",
-            "BTN": "Subscribe"
-        },
-        "SOCIAL": {
-            "HEADLINE": "Social networks",
-            "MSG": "Follow us if you want to be updated with our latest news!"
-        },
-        "OPEN_SOURCE": {
-            "HEADLINE": "OpenSource",
-            "MSG": "We are an Open Source software development community. Feel free to contribute from GitHub and join our talks in Slack."
-        }
+    "SOCIAL": {
+      "HEADLINE": "Social networks",
+      "MSG": "Follow us if you want to be updated with our latest news!"
     },
-    "ES": "spanish",
-    "AND": "andalûh"
+    "OPEN_SOURCE": {
+      "HEADLINE": "OpenSource",
+      "MSG": "We are an Open Source software development community. Feel free to contribute from GitHub and join our talks in Slack."
+    }
+  },
+  "TRANSCRIPT": {
+    "SHARE": {
+      "COPY": "Copy link",
+      "SOCIAL": "Share link",
+      "SHARE": "Share",
+      "COPIED": "Translation copied"
+    }
+  },
+  "ES": "spanish",
+  "AND": "andalûh"
 }

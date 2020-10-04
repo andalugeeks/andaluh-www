@@ -1,25 +1,33 @@
 {
-    "MENU": {
-        "ONE": "Iniçio",
-        "TWO": "Quienê çemô",
-        "THREE": "Contâtto",
-        "FOUR": "Repoçitorio"
+  "MENU": {
+    "ONE": "Iniçio",
+    "TWO": "Quienê çemô",
+    "THREE": "Contâtto",
+    "FOUR": "Repoçitorio"
+  },
+  "FOOTER": {
+    "NEWSLETTER": {
+      "HEADLINE": "Niûl-letê",
+      "MSG": "¡Çûccríbete a nuêttro niûl-letê pa êttâh ar día! Prometemô no çêh peçâh y çolo informâh de coçâ importantê.",
+      "BTN": "Çûccríbeme"
     },
-    "FOOTER": {
-        "NEWSLETTER": {
-            "HEADLINE": "Niûl-letê",
-            "MSG": "¡Çûccríbete a nuêttro niûl-letê pa êttâh ar día! Prometemô no çêh peçâh y çolo informâh de coçâ importantê.",
-            "BTN": "Çûccríbeme"
-        },
-        "SOCIAL": {
-            "HEADLINE": "Redê Çoçialê",
-            "MSG": "Çi lo que quierê êh mantenerte informá, entonçê puedê çegînnô en nuêttrâ redê çoçialê, que tenemô toâ lâ que quierâ."
-        },
-        "OPEN_SOURCE": {
-            "HEADLINE": "OpenSource",
-            "MSG": "Çomô una comunidá de deçarroyo de software libre. Contribuye dêdde GitHub y únete a la comberçaçión en Slack."
-        }
+    "SOCIAL": {
+      "HEADLINE": "Redê Çoçialê",
+      "MSG": "Çi lo que quierê êh mantenerte informá, entonçê puedê çegînnô en nuêttrâ redê çoçialê, que tenemô toâ lâ que quierâ."
     },
-    "ES": "catteyâno",
-    "AND": "andalûh"
+    "OPEN_SOURCE": {
+      "HEADLINE": "OpenSource",
+      "MSG": "Çomô una comunidá de deçarroyo de software libre. Contribuye dêdde GitHub y únete a la comberçaçión en Slack."
+    }
+  },
+  "TRANSCRIPT": {
+    "SHARE": {
+      "COPY": "Copiâh link",
+      "SOCIAL": "Compartîh link",
+      "SHARE": "Compartîh",
+      "COPIED": "Tradûççión copiá"
+    }
+  },
+  "ES": "catteyâno",
+  "AND": "andalûh"
 }
