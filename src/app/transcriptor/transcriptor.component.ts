@@ -161,14 +161,25 @@ export class TranscriptorComponent implements OnInit, OnDestroy {
       }).catch(e => console.error(e));
   }
 
-  shareFacebook() {
-    window.open(`https://www.facebook.com/sharer.php?u=${this.shareUrl}`, '_blank');
+  shareURL(url) {
+    window.open(url, '_blank');
     this.showShareModal = false;
   }
 
+  shareFacebook() {
+    this.shareURL(`https://www.facebook.com/sharer.php?u=${this.shareUrl}`);
+  }
+
   shareTwitter() {
-    window.open(`https://twitter.com/intent/tweet?text=${this.shareUrl}`, '_blank');
-    this.showShareModal = false;
+    this.shareURL(`https://twitter.com/intent/tweet?text=${this.shareUrl}`);
+  }
+
+  shareTelegram() {
+    this.shareURL(`https://telegram.me/share?url=${this.shareUrl}`);
+  }
+
+  shareWhatsapp() {
+    this.shareURL(`whatsapp://send?text=${this.shareUrl}`);
   }
 
   closeModal(evt) {

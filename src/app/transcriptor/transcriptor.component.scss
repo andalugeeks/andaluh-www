@@ -317,6 +317,22 @@
                 padding: 5px;
                 background-color: #55ACEE;
                 cursor: pointer;
+                margin-right: 5px;
+            }
+
+            div.telegram-wrapper {
+                border-radius: 5px;
+                padding: 5px;
+                background-color: #0087cb;
+                cursor: pointer;
+                margin-right: 5px;
+            }
+
+            div.whatsapp-wrapper {
+                border-radius: 5px;
+                padding: 5px;
+                background-color: #01e675;
+                cursor: pointer;
             }
 
             .share-icon {
@@ -341,6 +357,23 @@
             .twitter-link {
                 background-image: url('../../assets/svg/twitter.svg');
                 background-color: #55ACEE;
+            }
+
+            .telegram-link {
+                background-image: url('../../assets/svg/telegram.svg');
+                background-position-x: -15px;
+                background-position-y: -15px;
+                background-size: 76px;
+
+                @media screen and (max-width: 697px) {
+                    @media screen and (orientation:portrait) {
+                        background-size: 62px;
+                    }
+                }
+            }
+
+            .whatsapp-link {
+                background-image: url('../../assets/svg/whatsapp.svg');
             }
         }
     }
