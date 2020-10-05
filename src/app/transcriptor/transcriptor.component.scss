@@ -280,7 +280,7 @@
         background-color: #fefefe;
         top: 30%;
         padding: 20px 40px;
-        width: 20%;
+        width: 300px;
         border-radius: 5px;
 
         @media screen and (max-width: 769px) {
@@ -339,13 +339,6 @@
                 background-repeat: no-repeat;
                 height: 48px;
                 width: 48px;
-
-                @media screen and (max-width: 697px) {
-                    @media screen and (orientation:portrait) {
-                        height: 32px;
-                        width: 32px;
-                    }
-                }
             }
 
             .facebook-link {
@@ -364,12 +357,6 @@
                 background-position-x: -15px;
                 background-position-y: -15px;
                 background-size: 76px;
-
-                @media screen and (max-width: 697px) {
-                    @media screen and (orientation:portrait) {
-                        background-size: 62px;
-                    }
-                }
             }
 
             .whatsapp-link {
