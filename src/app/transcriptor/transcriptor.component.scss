@@ -55,7 +55,7 @@
                 left: 16px;
                 top: 3px;
 
-                & > div {
+                &>div {
                     margin-right: 4px;
                 }
 
@@ -68,6 +68,7 @@
 
             .dropdown-container {
                 margin-top: 0px;
+
                 @media screen and (max-width: 1087px) {
                     margin-top: 4px;
                 }
@@ -86,25 +87,33 @@
                 min-height: 200px;
             }
         }
-        ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+
+        ::-webkit-input-placeholder {
+            /* Chrome/Opera/Safari */
             color: #4e4d4d;
             font-style: italic;
             font-weight: 300;
             font-size: 16px;
         }
-        ::-moz-placeholder { /* Firefox 19+ */
+
+        ::-moz-placeholder {
+            /* Firefox 19+ */
             color: #4e4d4d;
             font-style: italic;
             font-weight: 300;
             font-size: 16px;
         }
-        :-ms-input-placeholder { /* IE 10+ */
+
+        :-ms-input-placeholder {
+            /* IE 10+ */
             color: #4e4d4d;
             font-style: italic;
             font-weight: 300;
             font-size: 16px;
         }
-        :-moz-placeholder { /* Firefox 18- */
+
+        :-moz-placeholder {
+            /* Firefox 18- */
             color: #4e4d4d;
             font-style: italic;
             font-weight: 300;
@@ -125,13 +134,13 @@
         font-size: 14px;
         font-weight: bold;
         cursor: pointer;
-        
+
         &.primary-border {
             background-color: transparent;
             border: 2px solid $colorPrimary;
             color: $colorPrimary;
         }
-    
+
         &.light-green {
             background-color: $lightGreen;
         }
@@ -155,6 +164,7 @@
                 transition: transform $animationSpeed3 $animationF0;
             }
         }
+
         ul {
             height: 0;
             opacity: 0;
@@ -189,6 +199,7 @@
         cursor: pointer;
         text-transform: uppercase
     }
+
     ul {
         position: absolute;
         visibility: hidden;
@@ -206,9 +217,184 @@
             max-height: 200px;
             overflow: auto;
         }
+
         li {
             cursor: pointer;
             margin-top: 2px;
         }
+    }
+}
+
+.share-wrapper {
+    visibility: hidden;
+    display: flex;
+    justify-content: flex-end;
+    margin: 5px 10px;
+
+    &.visible {
+        visibility: visible;
+    }
+
+    a {
+        margin-right: 5px;
+        position: relative;
+        display: inline-block;
+
+        &.copy {
+            margin-right: 15px;
+        }
+
+        .tooltip {
+            visibility: hidden;
+            width: 120px;
+            color: #fff;
+            background-color: #016735;
+            text-align: center;
+            padding: 5px 0;
+            font-size: .9rem;
+            position: absolute;
+            z-index: 1;
+            bottom: 100%;
+            left: 50%;
+            margin-left: -60px;
+        }
+
+        &:hover>.tooltip {
+            visibility: visible;
+        }
+    }
+}
+
+.modal-wrapper {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+
+    .modal-content {
+        background-color: #fefefe;
+        top: 30%;
+        padding: 20px 40px;
+        width: 300px;
+        border-radius: 5px;
+
+        @media screen and (max-width: 769px) {
+            @media screen and (orientation:portrait) {
+                border-radius: 0;
+                width: auto;
+            }
+        }
+
+        .modal-header {
+            margin-bottom: 12px;
+
+            h2 {
+                font-size: 1.2rem;
+                font-weight: bold;
+                text-align: center;
+            }
+        }
+
+        .modal-body {
+            display: flex;
+            justify-content: center;
+
+            div.facebook-wrapper {
+                padding: 5px;
+                border-radius: 5px;
+                background-color: #3B5998;
+                cursor: pointer;
+                margin-right: 5px;
+            }
+
+            div.twitter-wrapper {
+                border-radius: 5px;
+                padding: 5px;
+                background-color: #55ACEE;
+                cursor: pointer;
+                margin-right: 5px;
+            }
+
+            div.telegram-wrapper {
+                border-radius: 5px;
+                padding: 5px;
+                background-color: #0087cb;
+                cursor: pointer;
+                margin-right: 5px;
+            }
+
+            div.whatsapp-wrapper {
+                border-radius: 5px;
+                padding: 5px;
+                background-color: #01e675;
+                cursor: pointer;
+            }
+
+            .share-icon {
+                background-repeat: no-repeat;
+                height: 48px;
+                width: 48px;
+            }
+
+            .facebook-link {
+                background-image: url('../../assets/svg/facebook-f.svg');
+                background-color: #3B5998;
+                background-position-x: center;
+            }
+
+            .twitter-link {
+                background-image: url('../../assets/svg/twitter.svg');
+                background-color: #55ACEE;
+            }
+
+            .telegram-link {
+                background-image: url('../../assets/svg/telegram.svg');
+                background-position-x: -15px;
+                background-position-y: -15px;
+                background-size: 76px;
+            }
+
+            .whatsapp-link {
+                background-image: url('../../assets/svg/whatsapp.svg');
+            }
+        }
+    }
+}
+
+.tooltip-clipboard {
+    color: #fff;
+    background-color: #000;
+    text-align: center;
+    opacity: 0;
+    padding: 10px;
+    font-size: 1rem;
+    position: absolute;
+    top: calc(95% - 10px);
+    left: 10px;
+
+    @media screen and (max-width: 697px) {
+        @media screen and (orientation:portrait) {
+            width: 100%;
+            top: 95%;
+        }
+    }
+}
+
+.animated {
+    animation: fade 3s ease;
+}
+
+@keyframes fade {
+    66% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
     }
 }

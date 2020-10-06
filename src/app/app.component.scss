@@ -4,7 +4,7 @@
     display: flex;
     flex-direction: column;
     height: 100%;
-    
+
     .content-wrapper {
         flex: 1;
         overflow: auto;
@@ -18,6 +18,7 @@
                 background-image: url('../assets/svg/curve_bg_mobile.svg');
             }
         }
+
         @include until($tablet) {
             @media screen and (orientation:portrait) {
                 background-image: url('../assets/svg/curve_bg_mobile.svg');
@@ -28,7 +29,7 @@
         .top {
             width: 100%;
             padding: 12px 22px 24px;
-            margin-bottom: 16px;
+            margin-bottom: 15px;
 
             header {
                 margin: 12px 0;
@@ -37,6 +38,7 @@
                 @include until($tablet) {
                     margin: 0;
                 }
+
                 img {
                     width: 280px;
 
@@ -44,6 +46,7 @@
                         width: 240px;
                     }
                 }
+
                 svg {
                     width: 240px;
 

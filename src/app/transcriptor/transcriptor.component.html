@@ -13,17 +13,7 @@
             </div>
         </div>
     </div>
-    <textarea
-        #textCasElement
-        class="textarea column"
-        autocomplete="on"
-        autocorrect="off"
-        autocapitalize="off"
-        [placeholder]='casPlaceholder'
-        spellcheck="false"
-        (keypress)="onKeyUp($event.target.value)"
-        (keyup)="onKeyUp($event.target.value)"
-    ></textarea>
+    <textarea #textCasElement class="textarea column" autocomplete="on" autocorrect="off" autocapitalize="off" [placeholder]='casPlaceholder' spellcheck="false" (keypress)="onKeyUp($event.target.value)" (keyup)="onKeyUp($event.target.value)"></textarea>
 </div>
 <div class="textarea-wrapper">
     <div class="options-container">
@@ -64,17 +54,40 @@
             </div>
         </div>
     </div>
-    <textarea 
-        class="textarea column"
-        autocomplete="off"
-        autocorrect="off"
-        autocapitalize="off"
-        [placeholder]='andPlaceholder'
-        spellcheck="false"
-        readonly="true"
-        [value]="transcriptedValue"
-        (click)="copyToClipboard($event)"
-    ></textarea>
+    <textarea class="textarea column" autocomplete="off" autocorrect="off" autocapitalize="off" [placeholder]='andPlaceholder' spellcheck="false" readonly="true" [value]="transcriptedValue | decode" (click)="copyToClipboard($event)"></textarea>
+    <div class="share-wrapper" [ngClass]="{visible: transcriptedValue !== ''}">
+        <a class="copy" (click)="copy()">
+            <img src="./assets/imgs/share/copy.png" />
+            <span class="tooltip">{{share_text.copy | translate}}</span>
+        </a>
+        <a class="share" (click)="share()">
+            <img src="./assets/imgs/share/link.png" />
+            <span class="tooltip">{{share_text.social | translate}}</span>
+        </a>
+    </div>
 </div>
 
 <div class="overlay" (click)="dropdownToggle()" *ngIf="showVafDrop"></div>
+<div id="modal-wrapper" class="modal-wrapper" *ngIf="showShareModal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h2>{{share_text.share | translate}}</h2>
+        </div>
+        <div class="modal-body">
+            <div class="facebook-wrapper">
+                <div class="share-icon facebook-link" (click)="shareFacebook()"></div>
+            </div>
+            <div class="twitter-wrapper">
+                <div class="share-icon twitter-link" (click)="shareTwitter()"></div>
+            </div>
+            <div class="telegram-wrapper">
+                <div class="share-icon telegram-link" (click)="shareTelegram()"></div>
+            </div>
+            <div class="whatsapp-wrapper">
+                <div class="share-icon whatsapp-link" (click)="shareWhatsapp()"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<span id="tooltip-clipboard" class="tooltip-clipboard" [ngClass]="animated">{{share_text.copied | translate}}</span>
