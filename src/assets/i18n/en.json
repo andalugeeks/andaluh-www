@@ -14,8 +14,12 @@
     },
     "SOCIAL": {
       "HEADLINE": "Social networks",
-      "MSG": "Follow us if you want to be updated with our latest news!"
+      "MSG": "Follow us if you want to be updated with our latest news! We've almost all of them."
     },
+    "APPS": {
+      "HEADLINE": "Andalûh Apps",
+      "MSG": "Read Wikipedia in Andalûh with AndaluWiki. Download apps for Android, Windows o Linux. Try our Telegram bot."
+      },
     "OPEN_SOURCE": {
       "HEADLINE": "OpenSource",
       "MSG": "We are an Open Source software development community. Feel free to contribute from GitHub and join our talks in Slack."
