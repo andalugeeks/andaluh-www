@@ -51,6 +51,7 @@ export class TranscriptorComponent implements OnInit, OnDestroy {
     copy: 'TRANSCRIPT.SHARE.COPY',
     social: 'TRANSCRIPT.SHARE.SOCIAL',
     share: 'TRANSCRIPT.SHARE.SHARE',
+    msg: 'TRANSCRIPT.SHARE.MSG',
     copied: 'TRANSCRIPT.SHARE.COPIED',
   };
 

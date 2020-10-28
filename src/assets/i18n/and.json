@@ -26,10 +26,11 @@
   },
   "TRANSCRIPT": {
     "SHARE": {
-      "COPY": "Copiâh link",
-      "SOCIAL": "Compartîh link",
-      "SHARE": "Compartîh",
-      "COPIED": "Tradûççión copiá"
+      "COPY": "Copiâh",
+      "SOCIAL": "Compartîh",
+      "SHARE": "Difunde l'Andalûh",
+      "MSG": "Utiliça lô botonê pa compartîh en redê çoçialê. Çe añadirá un enlaçe pa rebiçâh er têtto en câtteyano y andalûh.",
+      "COPIED": "Têtto copiao!"
     }
   },
   "ES": "catteyâno",

@@ -27,10 +27,11 @@
   },
   "TRANSCRIPT": {
     "SHARE": {
-      "COPY": "Copy link",
-      "SOCIAL": "Share link",
-      "SHARE": "Share",
-      "COPIED": "Translation copied"
+      "COPY": "Copy",
+      "SOCIAL": "Share",
+      "SHARE": "Spread the Andalûh",
+      "MSG": "Use the buttons to share on your social networks. A link will be appended to review the translation.",
+      "COPIED": "Translation copied!"
     }
   },
   "ES": "spanish",
