@@ -168,19 +168,21 @@ export class TranscriptorComponent implements OnInit, OnDestroy {
   }
 
   shareFacebook() {
-    this.shareURL(`https://www.facebook.com/sharer.php?u=${this.shareUrl}`);
+    // Facebook automatically cuts long texts.
+    this.shareURL(`https://www.facebook.com/sharer.php?u=${this.shareUrl}&quote=${this.transcriptedValue}`);
   }
 
   shareTwitter() {
-    this.shareURL(`https://twitter.com/intent/tweet?text=${this.shareUrl}`);
+    var tweetMaxText = this.transcriptedValue.slice(0, 254); // 254 text message + url = 280 (max tweet length)
+    this.shareURL(`https://twitter.com/intent/tweet?text=${tweetMaxText}&url=${this.shareUrl}`);
   }
 
   shareTelegram() {
-    this.shareURL(`https://telegram.me/share?url=${this.shareUrl}`);
+    this.shareURL(`https://telegram.me/share?text=${this.transcriptedValue}&url=${this.shareUrl}`);
   }
 
   shareWhatsapp() {
-    this.shareURL(`whatsapp://send?text=${this.shareUrl}`);
+    this.shareURL(`whatsapp://send?text=${this.transcriptedValue}%0A%0A${this.shareUrl}`);
   }
 
   closeModal(evt) {
