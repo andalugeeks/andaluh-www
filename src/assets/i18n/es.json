@@ -16,6 +16,10 @@
       "HEADLINE": "Social networks",
       "MSG": "Follow us if you want to be updated with the latest!"
     },
+    "APPS": {
+      "HEADLINE": "Andalûh Apps",
+      "MSG": "Descarga apps para Android, Windows o Linux. Escribe en Andalûh con nuestro teclado predictivo. Usa el bot en Telegram."
+      },
     "OPEN_SOURCE": {
       "HEADLINE": "OpenSource",
       "MSG": "Somos una comunidad de desarrollo de software libre. Contribuye desde GitHub y únete a la conversación en Slack."

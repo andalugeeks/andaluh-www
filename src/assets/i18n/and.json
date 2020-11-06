@@ -3,7 +3,8 @@
     "ONE": "Iniçio",
     "TWO": "Quienê çemô",
     "THREE": "Contâtto",
-    "FOUR": "Repoçitorio"
+    "FOUR": "Repoçitorio",
+    "FIVE": "GitHub"
   },
   "FOOTER": {
     "NEWSLETTER": {
@@ -17,7 +18,7 @@
     },
     "APPS": {
       "HEADLINE": "Andalûh Apps",
-      "MSG": "Dêccarga apps pa Android, Windows o Linux. Êccribe n'Andalûh con nuêttro teclao. Prueba nuêttro bot de Telegram."
+      "MSG": "Dêccarga apps pa Android, Windows o Linux. Êccribe n'Andalûh con nuêttro teclao predîttibo. Uça er bot en Telegram."
     },
     "OPEN_SOURCE": {
       "HEADLINE": "OpenSource",
