@@ -47,7 +47,7 @@ export class TranscriptorComponent implements OnInit, OnDestroy {
   value: string = '';
   shareUrl: string = '';
   animated: string = '';
-  share_text: object = {
+  share_text = {
     copy: 'TRANSCRIPT.SHARE.COPY',
     social: 'TRANSCRIPT.SHARE.SOCIAL',
     share: 'TRANSCRIPT.SHARE.SHARE',
