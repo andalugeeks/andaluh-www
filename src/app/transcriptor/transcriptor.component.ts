@@ -147,7 +147,7 @@ export class TranscriptorComponent implements OnInit, OnDestroy {
 
   copy() {
     this._getShortURL().then((shortURL) => {
-      (navigator as NavigatorExtended).clipboard.writeText(shortURL).then(() => {
+      (navigator as NavigatorExtended).clipboard.writeText(this.transcriptedValue + " " + shortURL).then(() => {
         this.animated = 'animated'
         setTimeout(() => this.animated = '', 3000);
       });
