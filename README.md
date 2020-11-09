@@ -20,7 +20,7 @@ As there's no official or standard andaluz spelling, andaluh-py is adopting the 
 
 ## Usage
 
-[Angular CLI](https://github.com/angular/angular-cli) version 6.1.2.
+With [Angular CLI](https://github.com/angular/angular-cli) version 6.1.2: run `npm install`. There's different options for running. See below.
 
 ### Development server
 
