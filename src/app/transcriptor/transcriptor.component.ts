@@ -80,7 +80,7 @@ export class TranscriptorComponent implements OnInit, OnDestroy {
     if (this.casFromUrl) {
       // setTimeout(() => {
       this._setFromUrl();
-      this.transcriptedValue = this.epa.transcript(this.casFromUrl, this.vaf, this.vvf);
+      this.transcriptedValue = this.epa.transcript(this.casFromUrl, this.vaf, this.vvf, true);
       // }, 0);
     }
 
@@ -88,7 +88,7 @@ export class TranscriptorComponent implements OnInit, OnDestroy {
       debounceTime(0)
     ).subscribe(casText => {
       if (casText !== '') {
-        this.transcriptedValue = this.epa.transcript(casText, this.vaf, this.vvf);
+        this.transcriptedValue = this.epa.transcript(casText, this.vaf, this.vvf, true);
       } else {
         this.transcriptedValue = '';
       }
