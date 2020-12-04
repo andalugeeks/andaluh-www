@@ -80,7 +80,7 @@ export class TranscriptorComponent implements OnInit, OnDestroy {
     if (this.casFromUrl) {
       // setTimeout(() => {
       this._setFromUrl();
-      this.transcriptedValue = this.epa.transcript(this.casFromUrl, this.vaf, this.vvf, true);
+      this.transcriptedValue = this.epa.transcript(decodeURIComponent(this.casFromUrl), this.vaf, this.vvf, true);
       // }, 0);
     }
 
