@@ -32,7 +32,7 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 ### Run with Docker
 
-Run `ng build --prod` to build the project. Then run `docker-compose up --build` to build the docker image from `www/` built artifacts and running within a container with nginx. Edit the `docker-compose.yml` file with your preferences.
+Run `docker-compose up --build -d` to build and run a docker container with a development server.
 
 ## Support
 

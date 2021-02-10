@@ -1,8 +1,10 @@
-version: '3.1'
+version: '3.3'
 
 services:
     app:
-        image: 'andaluh-www'
+        image: 'andaluh/www:v1'
+        container_name: andaluh_www
+        restart: always
         build: '.'
         ports:
-            - 3000:80
+            - 4200:4200
