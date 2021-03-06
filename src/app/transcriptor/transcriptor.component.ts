@@ -10,7 +10,7 @@ import { debounceTime, windowWhen } from 'rxjs/operators';
 import { Component, ViewChild, HostBinding, OnInit, OnDestroy, Input } from '@angular/core';
 import { Http } from '@angular/http';
 import { environment } from '../../environments/environment';
-import EPA from '@andalugeeks/andaluh';
+import { EPA } from '@andalugeeks/andaluh';
 import { NavigatorExtended } from '../types/navigation.type';
 
 @Component({
