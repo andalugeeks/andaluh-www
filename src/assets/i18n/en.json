@@ -2,8 +2,8 @@
   "MENU": {
     "ONE": "Home",
     "TWO": "Who are we?",
-    "THREE": "Projects",
-    "FOUR": "Contact",
+    "THREE": "Contact",
+    "FOUR": "Repository",
     "FIVE": "GitHub"
   },
   "FOOTER": {
