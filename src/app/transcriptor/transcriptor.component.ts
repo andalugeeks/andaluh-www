@@ -25,6 +25,7 @@ export class TranscriptorComponent implements OnInit, OnDestroy {
 
   private epa: EPA;
   private subscription: Subject<string> = new Subject();
+  private URL_API = 'https://s.andaluh.es/yourls-api.php?signature=d387956c6c&action=shorturl&url=';
 
   showVafDrop: boolean = false;
   showShareModal: boolean = false;
@@ -151,7 +152,12 @@ export class TranscriptorComponent implements OnInit, OnDestroy {
         this.animated = 'animated'
         setTimeout(() => this.animated = '', 3000);
       });
-    }).catch(e => console.error(e));
+    }).catch(() => {
+      (navigator as NavigatorExtended).clipboard.writeText(this.transcriptedValue).then(() => {
+        this.animated = 'animated'
+        setTimeout(() => this.animated = '', 3000);
+      });
+    });
   }
 
   share() {
@@ -159,7 +165,10 @@ export class TranscriptorComponent implements OnInit, OnDestroy {
       then((shortURL) => {
         this.shareUrl = shortURL;
         this.showShareModal = true;
-      }).catch(e => console.error(e));
+      }).catch(() => {
+        this.shareUrl = '';
+        this.showShareModal = true;
+      });
   }
 
   shareURL(url) {
@@ -213,18 +222,16 @@ export class TranscriptorComponent implements OnInit, OnDestroy {
   }
 
   private _getShortURL(): Promise<string> {
-    const URL_API = 'https://s.andaluh.es/yourls-api.php?signature=d387956c6c&action=shorturl&url=';
     const URL = 'https://andaluh.es/transcriptor/#' + `?text=${this.value}`;
     return new Promise((resolve, reject) => {
-      this.http.get(`${URL_API}${encodeURIComponent(URL)}`).subscribe((response) => {
+      this.http.get(`${this.URL_API}${encodeURIComponent(URL)}`).subscribe((response) => {
         const text = response.text();
         const xml = (new DOMParser()).parseFromString(text, 'text/xml');
         const urlElement = xml.querySelector('shorturl');
         if (urlElement) {
           resolve(urlElement.textContent);
         }
-        reject('Error: Short URL was not created.')
-      });
+      }, (error) => reject(error));
     });
   }
 
