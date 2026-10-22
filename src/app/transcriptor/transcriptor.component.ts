@@ -25,7 +25,7 @@ export class TranscriptorComponent implements OnInit, OnDestroy {
 
   private epa: EPA;
   private subscription: Subject<string> = new Subject();
-  private URL_API = 'https://s.andaluh.es/yourls-api.php?signature=d387956c6c&action=shorturl&url=';
+  private URL_API = 'https://s.andaluh.es/yourls-api.php?signature=6d975f17136f2fecb10e8e9cfc0f5712&action=shorturl&url=';
 
   showVafDrop: boolean = false;
   showShareModal: boolean = false;
